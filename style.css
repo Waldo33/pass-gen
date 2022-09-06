@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 400px;
+    top: 40%;
+    transform: translateY(-50%);
+}
+li {
+    list-style: none;
+    cursor: copy;
+}
