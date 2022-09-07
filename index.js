@@ -18,7 +18,9 @@ const getData = async () => {
     );
     const data = await response.json();
     let order = 0;
+    navigator.clipboard.writeText(data[0].numbers[order]);
     const map = document.querySelector('.map');
+
     setLoading(false)
     data[0].numbers.forEach((item, index) => {
         const map_item = document.createElement('div')
@@ -45,6 +47,7 @@ const getData = async () => {
         document.querySelector('.output').innerHTML = '';
         map.children[order].classList.remove('map-item-active')
         order++
+        navigator.clipboard.writeText(data[0].numbers[order])
         if(order === data[0].numbers.length) {
             order = 0;
         }
@@ -55,6 +58,7 @@ const getData = async () => {
         document.querySelector('.output').innerHTML = '';
         map.children[order].classList.remove('map-item-active')
         order--
+        navigator.clipboard.writeText(data[0].numbers[order])
         if(!(order in data[0].numbers)) {
             order = data[0].numbers.length - 1;
         }
