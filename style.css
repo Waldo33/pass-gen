@@ -10,24 +10,24 @@
     /*top: 40%;*/
     /*transform: translateY(-50%);*/
 }
-li {
-    list-style: none;
-    cursor: copy;
+.output {
+    font-weight: 700;
+    font-size: 20px;
 }
-
 .map {
     display: grid;
-    width: 145px;
-    grid-template-columns: repeat(5, 25px);
-    grid-template-rows: repeat(7, 25px);
+    width: calc(145px * 2);
+     height: calc(205px * 2);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-gap: 5px;
     margin: 0 auto;
 }
 
 .map-item {
-    width: 25px;
-    height: 25px;
-    /*border-radius: 100%;*/
+    width: 100%;
+    height: 100%;
+    border-radius: calc(0.375rem - 1px);
     background: gray;
 }
 
