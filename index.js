@@ -36,6 +36,7 @@ const getData = async () => {
         }
         map.children[order].classList.remove('map-item-active')
         order = e.target.dataset.order;
+        navigator.clipboard.writeText(data[0].numbers[order])
         document.querySelectorAll('.map-item')[e.target.dataset.order].classList.add('map-item-active')
         render(data[0].numbers[order])
     })
