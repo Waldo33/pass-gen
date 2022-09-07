@@ -18,19 +18,47 @@ const getData = async () => {
     );
     const data = await response.json();
     let order = 0;
+    const map = document.querySelector('.map');
     setLoading(false)
     data[0].numbers.forEach((item, index) => {
+        const map_item = document.createElement('div')
+        map_item.classList.add('map-item')
+        map.insertAdjacentElement('beforeend', map_item)
+        map_item.dataset.order = index;
         if(index === order) {
             render(item, index)
         }
     })
+    map.addEventListener('click', (e) => {
+        console.log(e.target)
+        if(!e.target.dataset.order) {
+            return false
+        }
+        map.children[order].classList.remove('map-item-active')
+        order = e.target.dataset.order;
+        document.querySelectorAll('.map-item')[e.target.dataset.order].classList.add('map-item-active')
+        render(data[0].numbers[order])
+    })
+    map.children[order].classList.add('map-item-active')
     document.querySelector('#next').addEventListener('click', () => {
         document.querySelector('.output').innerHTML = '';
+        map.children[order].classList.remove('map-item-active')
         order++
         if(order === data[0].numbers.length) {
             order = 0;
         }
         render(data[0].numbers[order])
+        map.children[order].classList.add('map-item-active')
+    })
+    document.querySelector('#prev').addEventListener('click', () => {
+        document.querySelector('.output').innerHTML = '';
+        map.children[order].classList.remove('map-item-active')
+        order--
+        if(!(order in data[0].numbers)) {
+            order = data[0].numbers.length - 1;
+        }
+        render(data[0].numbers[order])
+        map.children[order].classList.add('map-item-active')
     })
     document.querySelector('#copy').addEventListener('click', (e) => {
         navigator.clipboard.writeText(data[0].numbers[order]).then(() => {
@@ -41,6 +69,7 @@ const getData = async () => {
 
 const render = (item, index) => {
     const list = document.querySelector('.output');
+    list.innerHTML = '';
     const el = document.createElement('span')
     el.innerHTML = `${item}`
     list.insertAdjacentElement('beforeend', el)

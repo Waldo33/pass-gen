@@ -5,12 +5,41 @@
 .card {
     text-align: center;
     display: block;
-    position: absolute;
+    /*position: absolute;*/
     width: 400px;
-    top: 40%;
-    transform: translateY(-50%);
+    /*top: 40%;*/
+    /*transform: translateY(-50%);*/
 }
 li {
     list-style: none;
     cursor: copy;
+}
+
+.map {
+    display: grid;
+    width: 145px;
+    grid-template-columns: repeat(5, 25px);
+    grid-template-rows: repeat(7, 25px);
+    grid-gap: 5px;
+    margin: 0 auto;
+}
+
+.map-item {
+    width: 25px;
+    height: 25px;
+    /*border-radius: 100%;*/
+    background: gray;
+}
+
+.map-item-active {
+    background: lightgreen;
+    /*border: 4px solid lightgreen;*/
+}
+
+.map-item-available {
+    background: green;
+}
+
+.map-container {
+    margin: 0 auto;
 }
