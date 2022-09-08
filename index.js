@@ -25,6 +25,7 @@ const getData = async () => {
     data[0].numbers.forEach((item, index) => {
         const map_item = document.createElement('div')
         map_item.classList.add('map-item')
+        map_item.title = item;
         map.insertAdjacentElement('beforeend', map_item)
         map_item.dataset.order = index;
         if(index === order) {

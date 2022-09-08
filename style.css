@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
 }
+body {
+    touch-action: none;
+}
 .card {
     text-align: center;
     display: block;
@@ -25,6 +28,7 @@
 }
 
 .map-item {
+    position: relative;
     width: 100%;
     height: 100%;
     border-radius: calc(0.375rem - 1px);
