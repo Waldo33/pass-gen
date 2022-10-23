@@ -18,7 +18,7 @@ const getData = async () => {
     );
     const data = await response.json();
     let order = 0;
-    navigator.clipboard.writeText(data[0].numbers[order]);
+    navigator.clipboard.writeText(data[1][order]);
     const map = document.querySelector('.map');
 
     setLoading(false)
@@ -39,36 +39,36 @@ const getData = async () => {
         }
         map.children[order].classList.remove('map-item-active')
         order = e.target.dataset.order;
-        navigator.clipboard.writeText(data[0].numbers[order])
+        navigator.clipboard.writeText(data[1][order])
         document.querySelectorAll('.map-item')[e.target.dataset.order].classList.add('map-item-active')
-        render(data[0].numbers[order])
+        render(data[1][order])
     })
     map.children[order].classList.add('map-item-active')
     document.querySelector('#next').addEventListener('click', () => {
         document.querySelector('.output').innerHTML = '';
         map.children[order].classList.remove('map-item-active')
         order++
-        navigator.clipboard.writeText(data[0].numbers[order])
-        if(order === data[0].numbers.length) {
+        navigator.clipboard.writeText(data[1][order])
+        if(order === data[0].length) {
             order = 0;
         }
-        render(data[0].numbers[order])
+        render(data[1][order])
         map.children[order].classList.add('map-item-active')
     })
     document.querySelector('#prev').addEventListener('click', () => {
         document.querySelector('.output').innerHTML = '';
         map.children[order].classList.remove('map-item-active')
         order--
-        navigator.clipboard.writeText(data[0].numbers[order])
-        if(!(order in data[0].numbers)) {
-            order = data[0].numbers.length - 1;
+        navigator.clipboard.writeText(data[1][order])
+        if(!(order in data[1])) {
+            order = data[1].length - 1;
         }
-        render(data[0].numbers[order])
+        render(data[1][order])
         map.children[order].classList.add('map-item-active')
     })
     document.querySelector('#copy').addEventListener('click', (e) => {
-        navigator.clipboard.writeText(data[0].numbers[order]).then(() => {
-            console.log(`Скопировано: ${data[0].numbers[order]}`)
+        navigator.clipboard.writeText(data[1][order]).then(() => {
+            console.log(`Скопировано: ${data[1][order]}`)
         })
     })
 }
