@@ -22,7 +22,7 @@ const getData = async () => {
     const map = document.querySelector('.map');
 
     setLoading(false)
-    data[0].numbers.forEach((item, index) => {
+    data[1].forEach((item, index) => {
         const map_item = document.createElement('div')
         map_item.classList.add('map-item')
         map_item.title = item;
