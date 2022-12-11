@@ -1,3 +1,9 @@
+window.addEventListener('load', async () => {
+    if('serviceWorker' in navigator) {
+        await navigator.serviceWorker.register('/sw.js')
+    }
+})
+
 function setLoading(status) {
     if(status) {
         document.querySelector('.output').innerHTML = "Loading..."
