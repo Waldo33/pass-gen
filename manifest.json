@@ -8,27 +8,27 @@
   "start_url": ".",
   "icons": [
     {
-      "src": "/icons/favicon.svg",
+      "src": "favicon.svg",
       "sizes": "150x150",
       "type": "image/svg"
     },
     {
-      "src": "/icons/app-icon-96-96.png",
+      "src": "app-icon-96-96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/icons/app-icon-144-144.png",
+      "src": "app-icon-144-144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/icons/app-icon-256-256.png",
+      "src": "app-icon-256-256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/icons/app-icon-512-512.png",
+      "src": "app-icon-512-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

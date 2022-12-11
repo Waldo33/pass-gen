@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Waldo33/pass-gen/issues"
   },
-  "homepage": "https://github.com/Waldo33/pass-gen#readme"
+  "homepage": "https://github.com/Waldo33/pass-gen#readme",
+  "dependencies": {
+    "serve": "^14.1.2"
+  }
 }
