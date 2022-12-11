@@ -5,7 +5,8 @@ const assetUrls = [
     'index.html',
     '/js/script.js',
     '/css/style.css',
-    // 'offline.html'
+    'offline.html',
+    '/img/bazazavr.webp'
 ]
 
 self.addEventListener('install', async event => {
