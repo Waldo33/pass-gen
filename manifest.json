@@ -5,7 +5,7 @@
   "background_color": "#fff",
   "display": "standalone",
   "orientation": "portrait",
-  "start_url": ".",
+  "start_url": "https://waldo33.github.io/pass-gen",
   "icons": [
     {
       "src": "favicon.svg",
