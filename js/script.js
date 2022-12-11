@@ -1,6 +1,7 @@
 window.addEventListener('load', async () => {
     if('serviceWorker' in navigator) {
         await navigator.serviceWorker.register('/sw.js')
+        getData()
     }
 })
 
@@ -12,7 +13,7 @@ function setLoading(status) {
     }
 }
 
-const getData = async () => {
+async function getData() {
     setLoading(true)
     const response = await fetch('https://62935a557aa3e6af1a0a08e2.mockapi.io/table',
         {
@@ -86,5 +87,3 @@ const render = (item, index) => {
     el.innerHTML = `${item}`
     list.insertAdjacentElement('beforeend', el)
 }
-
-getData()
