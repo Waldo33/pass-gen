@@ -1,0 +1,19 @@
+{
+  "name": "pass-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Waldo33/pass-gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Waldo33/pass-gen/issues"
+  },
+  "homepage": "https://github.com/Waldo33/pass-gen#readme"
+}
