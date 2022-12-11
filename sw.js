@@ -3,10 +3,10 @@ const dynamicCacheName = 'd-app-v3'
 
 const assetUrls = [
     'index.html',
-    '/js/script.js',
-    '/css/style.css',
-    'offline.html',
-    '/img/bazazavr.webp'
+    './js/script.js',
+    './css/style.css',
+    './offline.html',
+    './img/bazazavr.webp'
 ]
 
 self.addEventListener('install', async event => {
